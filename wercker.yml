@@ -4,6 +4,8 @@ services:
 build:
     steps:
       - bundle-install
+      - heroku-deploy:
+          install-toolbelt: true
       - rails-database-yml:
           service: postgresql
       - script:
